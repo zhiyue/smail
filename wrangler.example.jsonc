@@ -6,6 +6,18 @@
 	"observability": {
 		"enabled": true
 	},
+	// Environment variables for domain configuration
+	// Set DOMAIN and PROTOCOL in Cloudflare Workers dashboard or via wrangler secret
+	"vars": {
+		"DOMAIN": "yourdomain.com",
+		"PROTOCOL": "https"
+	},
+	"routes": [
+		{
+			"pattern": "yourdomain.com",
+			"custom_domain": true
+		}
+	],
 	"send_email": [
 		{
 			"name": "EMAIL"

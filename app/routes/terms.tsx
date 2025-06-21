@@ -8,6 +8,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "~/components/ui/card";
+import { config } from "~/lib/config";
 
 import type { Route } from "./+types/terms";
 
@@ -316,7 +317,7 @@ export default function Terms() {
 									如果您对本服务条款有任何问题，请通过以下方式联系我们：
 								</p>
 								<ul className="list-disc pl-6 space-y-1 text-gray-600">
-									<li>邮箱：legal@smail.pw</li>
+									<li>邮箱：{config.legalEmail}</li>
 									<li>
 										联系表单：通过我们的
 										<Link

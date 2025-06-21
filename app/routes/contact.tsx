@@ -8,6 +8,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "~/components/ui/card";
+import { config } from "~/lib/config";
 
 import type { Route } from "./+types/contact";
 
@@ -209,10 +210,10 @@ export default function Contact({ loaderData }: ComponentProps) {
 											您也可以直接发送邮件给我们：
 										</p>
 										<a
-											href="mailto:support@smail.pw"
+											href={`mailto:${config.supportEmail}`}
 											className="text-blue-600 font-medium hover:underline text-sm sm:text-base break-all"
 										>
-											support@smail.pw
+											{config.supportEmail}
 										</a>
 									</CardContent>
 								</Card>
